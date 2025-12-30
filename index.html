@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Empréstimo de Livros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="principal">
+
+<div class="container" id="principal">
+
+     <div class="sair">
+    <button class="btn-sair" onclick="logout()">Sair</button>
+</div> 
+    <h2>Sistema de Empréstimo de Livros</h2>
+    <br><br><br>
+
+
+    <div class="grid">
+
+        <!-- AUTORES -->
+        <div class="card1">
+            <h3>Autores</h3>
+            <input type="text" id="autor" placeholder="Nome do autor">
+            <button onclick="addAutor()">Cadastrar</button>
+            <ul id="listaAutores"></ul>
+        </div>
+
+        <!-- LIVROS -->
+        <div class="card1">
+            <h3>Livros</h3>
+            <input type="text" id="livro" placeholder="Nome do livro">
+            <select id="autorLivro"></select>
+            <button onclick="addLivro()">Cadastrar</button>
+            <ul id="listaLivros"></ul>
+        </div>
+
+        <!-- LEITORES -->
+        <div class="card1">
+            <h3>Leitores</h3>
+            <input type="text" id="leitor" placeholder="Nome do leitor">
+            <button onclick="addLeitor()">Cadastrar</button>
+            <ul id="listaLeitores"></ul>
+        </div>
+
+        <!-- EMPRÉSTIMOS -->
+        <div class="card1">
+            <h3>Empréstimos</h3>
+            <select id="livroEmprestimo"></select>
+            <select id="leitorEmprestimo"></select>
+            <button onclick="emprestar()">Emprestar</button>
+            <ul id="listaEmprestimos"></ul>
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

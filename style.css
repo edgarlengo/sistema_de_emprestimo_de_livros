@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.login-imagem{
+    background: url("imagens/hacker2.jpeg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.principal{
+    background: url("imagens/livros.jpeg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+body{
+    font-family: "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.card {
+    height: 180px;
+    width: 280px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.card1 {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.card1 input {
+    width: 90%;
+    margin-top: 10px;
+    margin: 2%;
+}
+
+.card input{
+    width: 90%;
+    margin-top: 10px;
+    margin: 2%;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 50px;
+
+}
+
+h1, h3{
+    color:white;
+}
+
+h1, h3{
+    text-align: center;
+    color:   #1d3155;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background:   #141e30;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background: rgb(34, 65, 83);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #f1f1f1;
+    margin-top: 5px;
+    padding: 6px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Botões pequenos dentro das listas */
+ul li button {
+    width: auto;
+    padding: 4px 8px;
+    font-size: 12px;
+    margin-left: 8px;
+    border-radius: 4px;
+}
+
+/* Botão eliminar */
+.btn-eliminar {
+    background: #c0392b;
+    color: white;
+}
+
+.btn-eliminar:hover {
+    background: #922b21;
+}
+
+/* Botão devolver */
+.btn-devolver {
+    background: #27ae60;
+    color: white;
+}
+
+.btn-devolver:hover {
+    background: #1e8449;
+}
+
+/* Lista organizada */
+ul li {
+    background: #f1f1f1;
+    margin-top: 5px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Área do texto */
+.li-texto {
+    flex: 1;
+    font-size: 14px;
+}
+
+/* Botão sair */
+.sair {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.btn-sair {
+    background: #c0392b;
+    color: white;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 6px;
+    width: auto;
+}
+
+.btn-sair:hover {
+    background: #922b21;
+}
+
