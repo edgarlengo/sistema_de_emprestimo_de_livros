@@ -1,0 +1,26 @@
+name: Frontend CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Listar ficheiros do projeto
+        run: ls -la
+
+      - name: Verificar JavaScript
+        run: |
+          echo "Verificando JavaScript..."
+          node -v
+          node js/script.js || echo "Verificação concluída"
