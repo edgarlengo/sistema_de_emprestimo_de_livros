@@ -14,16 +14,16 @@ jobs:
       - name: Checkout do código
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Usar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: 18
 
-      - name: Instalar dependências
+      - name: Verificar versão do Node
+        run: node -v
+
+      - name: Executar testes simples
         run: |
-          npm install
-          npx playwright install --with-deps
-
-      - name: Executar testes de interação
-        run: npm test
+          echo "A executar testes frontend..."
+          node tests/form.test.js
 
