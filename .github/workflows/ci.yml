@@ -2,28 +2,28 @@ name: Frontend Interaction Tests
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
   pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout do código
+      - name: Checkout do repositório
         uses: actions/checkout@v4
 
-      - name: Usar Node.js
+      - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: '18'
 
-      - name: Verificar versão do Node
+      - name: Verificar Node
         run: node -v
 
-      - name: Executar testes simples
-        run: |
-          echo "A executar testes frontend..."
-          node tests/form.test.js
+      - name: Executar teste frontend
+        run: node tests/form.test.js
 
