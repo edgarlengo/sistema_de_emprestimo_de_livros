@@ -1,26 +1,29 @@
-name: Frontend CI
+name: Frontend Interaction Tests
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
   pull_request:
-    branches:
-      - main
+    branches: [ "main" ]
 
 jobs:
-  check:
+  test:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout do código
         uses: actions/checkout@v4
 
-      - name: Listar ficheiros do projeto
-        run: ls -la
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
 
-      - name: Verificar JavaScript
+      - name: Instalar dependências
         run: |
-          echo "Verificando JavaScript..."
-          node -v
-          node js/script.js || echo "Verificação concluída"
+          npm install
+          npx playwright install --with-deps
+
+      - name: Executar testes de interação
+        run: npm test
+
