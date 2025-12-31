@@ -1,4 +1,4 @@
-name: Frontend Interaction testes
+name: Frontend Interaction Teste
 
 on:
   push:
@@ -24,6 +24,6 @@ jobs:
       - name: Verificar Node
         run: node -v
 
-      - name: Executar testes frontend
-        run: node tests/form.test.js
+      - name: Executar teste frontend
+        run: node testes/form.test.js
 
