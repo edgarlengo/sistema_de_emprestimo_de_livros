@@ -1,29 +1,29 @@
-name: Frontend Interaction Teste
+name: Frontend Interaction Tests
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
   pull_request:
-    branches:
-      - main
+    branches: [ "main" ]
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout do repositório
+      - name: Checkout do código
         uses: actions/checkout@v4
 
-      - name: Configurar Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
 
-      - name: Verificar Node
-        run: node -v
+      - name: Instalar dependências
+        run: |
+          npm install
+          npx playwright install --with-deps
 
-      - name: Executar teste frontend
-        run: node testes/form.test.js
+      - name: Executar testes de interação
+        run: npm test
 
