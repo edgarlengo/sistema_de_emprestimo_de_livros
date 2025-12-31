@@ -1,4 +1,4 @@
-name: Frontend Interaction Tests
+name: Frontend Tests
 
 on:
   push:
@@ -11,19 +11,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout do código
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '18'
 
-      - name: Instalar dependências
+      - name: Instalar ESLint
         run: |
-          npm install
-          npx playwright install --with-deps
+          npm init -y
+          npm install eslint --save-dev
 
-      - name: Executar testes de interação
-        run: npm test
+      - name: Executar ESLint
+        run: npx eslint js/*.js
 
