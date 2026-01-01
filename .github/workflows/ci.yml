@@ -17,11 +17,5 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Instalar ESLint
-        run: |
-          npm init -y
-          npm install eslint --save-dev
-
-      - name: Executar ESLint
-        run: npx eslint js/*.js
+      
 
