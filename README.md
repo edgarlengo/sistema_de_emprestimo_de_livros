@@ -21,3 +21,7 @@ Funcionalidades
 - Eliminação de registos
 
 É de salientar que este projeto não utiliza backend, os dados podem ser armazenados temporariamente em Arrays JavaScript, não há persistência em base de dados.
+
+Componentes do grupo.
+Pascoal Edgar João Lengo
+Deodato Alfredo Silva Nunes
